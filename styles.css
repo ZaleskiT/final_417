@@ -1,0 +1,120 @@
+/* Orange, Black, White as main colors */
+:root {
+  --color-bg: #f7f7f7;
+  --color-surface: #ffffff;
+  --color-text: #111111;
+  --color-text-muted: #555555;
+  --color-accent: #ff7a1a;
+  --color-accent-dark: #cc5f10;
+  --color-border: #dddddd;
+  --color-error: #c0392b;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.entire-page {
+  max-width: 1280px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background-color: var(--color-bg);
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+/* Dark theme */
+body.dark-theme {
+  --color-bg: #050505;
+  --color-surface: #181818;
+  --color-text: #f7f7f7;
+  --color-text-muted: #cccccc;
+  --color-border: #333333;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Dark theme button */
+
+.darklight-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  border-radius: 999px;
+  border: 1px solid var(--color-border);
+  padding: 0.4rem 0.8rem;
+  background: transparent;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+/* Header & Nav */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--color-border);
+  background-color: var(--color-surface);
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.icon-area {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.icon {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+}
+
+.icon-text h1 {
+  font-size: 1.4rem;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.icon-text p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+/* Navigation Links */
+.main-nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 0.25rem 0.4rem;
+  border-radius: 999px;
+}
+
+.main-nav a:hover,
+.main-nav a:focus {
+  background-color: var(--color-accent);
+  color: #ffffff;
+}
