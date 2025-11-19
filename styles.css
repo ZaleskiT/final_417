@@ -1,4 +1,4 @@
-/* Orange, Black, White as main colors */
+/* Orange, Black, White as main colors, generated from a color wheel tool */
 :root {
   --color-bg: #f7f7f7;
   --color-surface: #ffffff;
@@ -9,12 +9,6 @@
   --color-border: #dddddd;
   --color-error: #c0392b;
   --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
 }
 
 .entire-page {
@@ -53,7 +47,7 @@ body.dark-theme {
   padding: 0.4rem 0.8rem;
   background: transparent;
   cursor: pointer;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
 }
 
 /* Header & Nav */
@@ -108,7 +102,7 @@ body.dark-theme {
   text-decoration: none;
   color: var(--color-text);
   font-weight: 500;
-  font-size: 0.95rem;
+  font-size: 1rem;
   padding: 0.25rem 0.4rem;
   border-radius: 999px;
 }
@@ -117,4 +111,117 @@ body.dark-theme {
 .main-nav a:focus {
   background-color: var(--color-accent);
   color: #ffffff;
+}
+
+/* Sections */
+
+.section {
+  padding: 2rem 1.5rem;
+}
+
+.section h2 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-size: 1.6rem;
+}
+
+.section-intro {
+  max-width: 40rem;
+  margin-bottom: 1rem;
+  color: var(--color-text-muted);
+}
+
+/* Two-column template */
+
+.two-column {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 1.5rem;
+}
+
+/* About list */
+
+.about-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.about-list li {
+  margin-bottom: 0.5rem;
+  padding-left: 1.4rem;
+  position: relative;
+}
+
+.about-list li::before {
+  content: "▶";
+  position: absolute;
+  left: 0;
+  top: 0.1rem;
+  font-size: 0.7rem;
+  color: var(--color-accent);
+}
+
+/* Footer */
+
+.site-footer {
+  padding: 1rem 1.5rem 1.5rem;
+  border-top: 1px solid var(--color-border);
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+form {
+  max-width: 720px;
+}
+
+.form-row {
+  margin-bottom: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label,
+legend {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+input,
+textarea {
+  font: inherit;
+  padding: 0.4rem 0.5rem;
+  border-radius: 6px;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-surface);
+  color: var(--color-text);
+}
+
+input:focus,
+textarea:focus {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 1px;
+}
+
+.radio-group {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 0.25rem;
+}
+
+.required {
+  color: var(--color-error);
+}
+
+.error-message {
+  color: var(--color-error);
+  min-height: 1rem;
+  margin-top: 0.25rem;
+}
+
+.form-message {
+  margin-top: 0.75rem;
 }
