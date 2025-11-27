@@ -1,6 +1,9 @@
 "use strict";
 
 (function () {
+    const body = document.body;
+    const darklightToggleBtn = document.getElementById("darklight-toggle");
+    const darklightToggleLabel = darklightToggleBtn?.querySelector(".darklight-toggle_label");
 
     const contactForm = document.getElementById("contact-form");
 
@@ -133,5 +136,29 @@
       contactForm.reset();
     });
   }
+
+  // Dark & Light toggle
+  function applyTheme(theme) {
+    const isDark = theme === "dark";
+    body.classList.toggle("dark-theme", isDark);
+
+    if (darklightToggleLabel) {
+      darklightToggleLabel.textContent = isDark ? "Dark" : "Light";
+    }
+  }
+
+  function initTheme() {
+    applyTheme("light"); // more logic?
+  }
+
+  if (darklightToggleBtn) {
+    darklightToggleBtn.addEventListener("click", function () {
+      const isCurrentlyDark = body.classList.contains("dark-theme");
+      const newTheme = isCurrentlyDark ? "light" : "dark";
+      applyTheme(newTheme);
+    });
+  }
+
+  initTheme();
 
 })();
