@@ -225,3 +225,148 @@ textarea:focus {
 .form-message {
   margin-top: 0.75rem;
 }
+
+/* Cost Calculator */
+.shop-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.product-card {
+  background-color: var(--color-surface);
+  border-radius: 10px;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--color-border);
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.product-card img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.product-card h3 {
+  margin: 0.25rem 0;
+  font-size: 1rem;
+}
+
+.product-price {
+  margin: 0;
+  font-weight: 700;
+  color: var(--color-accent);
+}
+
+.product-desc {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  flex-grow: 1;
+}
+
+.product-controls {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.cart-summary {
+  background-color: var(--color-surface);
+  border-radius: 10px;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--color-border);
+  padding: 1rem;
+}
+
+.cart-summary h3 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.cart-items {
+  list-style: none;
+  margin: 0 0 0.75rem;
+  padding: 0;
+  max-height: 200px;
+  overflow-y: auto;
+  font-size: 0.9rem;
+}
+
+.cart-items li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.25rem;
+}
+
+.cart-totals {
+  border-top: 1px solid var(--color-border);
+  padding-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.cart-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+}
+
+.cart-row--total {
+  font-weight: 700;
+  border-top: 1px dashed var(--color-border);
+  padding-top: 0.4rem;
+}
+
+.cart-message {
+  font-size: 0.85rem;
+  min-height: 1.2em;
+}
+
+/* Buttons */
+.btn-primary,
+.btn-secondary {
+  border-radius: 999px;
+  border: none;
+  padding: 0.45rem 0.9rem;
+  font: inherit;
+  cursor: pointer;
+  transition: transform 0.05s ease, box-shadow 0.05s ease, background-color 0.1s ease;
+}
+
+.btn-primary {
+  background-color: var(--color-accent);
+  color: #ffffff;
+  box-shadow: var(--shadow-soft);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--color-accent-dark);
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background-color: #111111;
+  color: #ffffff;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+  opacity: 0.5;
+}
+
+.btn-full {
+  width: 100%;
+}

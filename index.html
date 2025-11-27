@@ -36,8 +36,8 @@
     </header>
     <main>
       <!-- About section -->
-       <section id="about" class="section" aria-labelledby="about-heading">
-        <h2 id="about-heading">About 51% Winrate</h2>
+       <section id="about" class="section">
+        <h2>About 51% Winrate</h2>
         <div class="two-column">
           <div>
             <p>
@@ -56,6 +56,87 @@
               <li>IRL event meetups</li>
             </ul>
           </div>
+        </div>
+      </section>
+
+      <!-- Cost calculator // shopping section -->
+      <section id="cost-calculator" class="section">
+        <h2>51% Merch</h2>
+        <p class="section-intro">
+          If you're interested in representing our club at tournaments, we have an expanding set of dice and clothing to offer.
+        </p>
+
+        <div class="shop-layout">
+          <div class="product-list">
+            <article class="product-card" product-id="shirt1">
+              <img src="images/shop_1.png" alt="51% baseball shirt">
+              <h3>51% Baseball Shirt</h3>
+              <p class="product-price" price="40.00">$40.00</p>
+              <p class="product-desc">
+                Represent us in style with this customizable baseball jersey.
+              </p>
+              <div class="product-controls">
+                <button type="button" class="btn-secondary add">Add</button>
+                <button type="button" class="btn-secondary remove">Remove</button>
+              </div>
+            </article>
+
+            <article class="product-card" product-id="dice1">
+              <img src="images/shop_2.jpg" alt="51% dice set 1">
+              <h3>51% Dice Set 1</h3>
+              <p class="product-price" price="20.00">$20.00</p>
+              <p class="product-desc">
+                A set of 24 dice with white pips.
+              </p>
+              <div class="product-controls">
+                <button type="button" class="btn-secondary add">Add</button>
+                <button type="button" class="btn-secondary remove">Remove</button>
+              </div>
+            </article>
+
+            <article class="product-card" product-id="dice2">
+              <img src="images/shop_3.png" alt="51% dice set 2">
+              <h3>51% Dice Set 2</h3>
+              <p class="product-price" price="20.00">$20.00</p>
+              <p class="product-desc">
+                A set of 24 dice with black pips.
+              </p>
+              <div class="product-controls">
+                <button type="button" class="btn-secondary add">Add</button>
+                <button type="button" class="btn-secondary remove">Remove</button>
+              </div>
+            </article>
+          </div>
+
+          <aside class="cart-summary" aria-label="Cart">
+            <h3>Cart</h3>
+            <ul id="cart-items" class="cart-items">
+            </ul>
+
+            <div class="cart-totals">
+              <div class="cart-row">
+                <span>Subtotal:</span>
+                <span id="cart-subtotal">$0.00</span>
+              </div>
+              <div class="cart-row">
+                <span>8.5% Tax:</span>
+                <span id="cart-tax">$0.00</span>
+              </div>
+              <div class="cart-row">
+                <span>Shipping:</span>
+                <span id="cart-shipping">$0.00</span>
+              </div>
+              <div class="cart-row cart-row--total">
+                <span>Total:</span>
+                <span id="cart-total">$0.00</span>
+              </div>
+            </div>
+
+            <button type="button" id="checkout-btn" class="btn-primary btn-full">
+              Check Out
+            </button>
+            <p id="checkout-message" class="cart-message"></p>
+          </aside>
         </div>
       </section>
 
