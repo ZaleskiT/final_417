@@ -108,8 +108,7 @@ body.dark-theme {
   border-radius: 999px;
 }
 
-.main-nav a:hover,
-.main-nav a:focus {
+.main-nav a:hover {
   background-color: var(--color-accent);
   color: #ffffff;
 }
@@ -352,8 +351,7 @@ textarea:focus {
   box-shadow: var(--shadow);
 }
 
-.btn-primary:hover,
-.btn-primary:focus {
+.btn-primary:hover {
   background-color: var(--color-accent-dark);
   transform: translateY(-1px);
 }
@@ -363,8 +361,7 @@ textarea:focus {
   color: #ffffff;
 }
 
-.btn-secondary:hover,
-.btn-secondary:focus {
+.btn-secondary:hover {
   opacity: 0.5;
 }
 
